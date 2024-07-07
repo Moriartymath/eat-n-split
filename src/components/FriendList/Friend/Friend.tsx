@@ -1,12 +1,21 @@
 import styles from "./Friend.module.css";
 
+type FriendProps = {
+  img: string;
+  friendName: string;
+  oweBalance: number;
+  id: number;
+  selectedFriendId: number;
+  setSelectedFriendId: Function;
+};
+
 function Friend({
   img,
   friendName,
   oweBalance,
   id,
   selectedFriendId,
-  setSelectedFriend,
+  setSelectedFriendId,
 }) {
   return (
     <li className={styles.friend}>
@@ -27,7 +36,7 @@ function Friend({
       </div>
       <button
         onClick={() =>
-          setSelectedFriend((currId: number) => (currId === id ? -1 : id))
+          setSelectedFriendId((currId: number) => (currId === id ? -1 : id))
         }
       >
         {id === selectedFriendId ? "Close" : "Select"}
