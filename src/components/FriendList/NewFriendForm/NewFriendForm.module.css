@@ -1,0 +1,25 @@
+.friendForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  background-color: antiquewhite;
+  padding: 1em;
+}
+
+.name,
+.image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.imageInput,
+.nameInput {
+  font-size: inherit;
+  padding: 0.3em;
+}
+
+.add {
+  font-size: inherit;
+  width: 46.1%;
+}

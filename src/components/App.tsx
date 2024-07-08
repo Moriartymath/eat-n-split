@@ -6,9 +6,24 @@ import PaymentInfo from "./PaymentInfo/PaymentInfo.tsx";
 function App() {
   const [selectedFriendId, setSelectedFriendId] = useState(-1);
   const [friendList, setFriendList] = useState([
-    { img: "hi", name: "illia Strelia", id: Date.now(), oweBalance: 20 },
-    { img: "hi", name: "illia Strelia1", id: 1, oweBalance: -50 },
-    { img: "hi", name: "illia Strelia2", id: 2, oweBalance: 100 },
+    {
+      img: "https://i.pravatar.cc/48",
+      name: "illia Strelia",
+      id: Date.now(),
+      oweBalance: 20,
+    },
+    {
+      img: "https://i.pravatar.cc/48",
+      name: "illia Strelia1",
+      id: 1,
+      oweBalance: -50,
+    },
+    {
+      img: "https://i.pravatar.cc/48",
+      name: "illia Strelia2",
+      id: 2,
+      oweBalance: 100,
+    },
   ]);
 
   return (

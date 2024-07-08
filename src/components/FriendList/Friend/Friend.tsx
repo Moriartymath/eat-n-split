@@ -16,15 +16,15 @@ function Friend({
   id,
   selectedFriendId,
   setSelectedFriendId,
-}) {
+}: FriendProps) {
   return (
     <li className={styles.friend}>
-      <div className="friendInfo">
+      <div className={styles.friendInfo}>
         <div className={styles.imageContainer}>
           <img src={img} alt={friendName} className={styles.image} />
         </div>
-        <h3 className={styles.text}>
-          {friendName}
+        <div className={styles.text}>
+          <h3>{friendName}</h3>
           <p>
             {!oweBalance
               ? `You and ${friendName} are even`
@@ -32,7 +32,7 @@ function Friend({
               ? `${friendName} owes you ${oweBalance}`
               : `You owe ${friendName} ${oweBalance}€`}
           </p>
-        </h3>
+        </div>
       </div>
       <button
         onClick={() =>

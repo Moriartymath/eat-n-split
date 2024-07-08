@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 1em;
+  column-gap: 7em;
 }
 
 .friendInfo {
@@ -10,18 +12,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  column-gap: 1em;
 }
 
 .text {
   display: flex;
   flex-direction: column;
+  row-gap: 1em;
 }
 .imageContainer {
-  border: 3em;
-  width: 1.5em;
-  height: 1.5em;
+  height: 3.5em;
 }
 .image {
-  width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 3em;
 }
