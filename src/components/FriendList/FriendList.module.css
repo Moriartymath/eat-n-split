@@ -5,10 +5,18 @@
   justify-content: space-between;
 }
 
+.list {
+  min-height: min-content;
+  max-height: 52%;
+  overflow-y: auto;
+}
 .leftContainer {
   padding: 1em;
   border: 1px solid black;
   border-radius: 1em;
+  min-height: min-content;
+  max-height: 65%;
+  row-gap: 1em;
 }
 .addFriendContainer {
   display: flex;

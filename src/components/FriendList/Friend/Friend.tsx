@@ -30,7 +30,7 @@ function Friend({
               ? `You and ${friendName} are even`
               : oweBalance > 0
               ? `${friendName} owes you ${oweBalance}`
-              : `You owe ${friendName} ${oweBalance}€`}
+              : `You owe ${friendName} ${Math.abs(oweBalance)}€`}
           </p>
         </div>
       </div>

@@ -26,19 +26,25 @@ function FriendList({
 
   return (
     <div className={styles.leftContainer}>
-      <ul className={styles.list}>
-        {friendList.map((friend) => (
-          <Friend
-            selectedFriendId={selectedFriendId}
-            id={friend.id}
-            key={friend.id}
-            setSelectedFriendId={setselectedFriendId}
-            oweBalance={friend.oweBalance}
-            img={friend.img}
-            friendName={friend.name}
-          />
-        ))}
-      </ul>
+      {friendList.length ? (
+        <ul className={styles.list}>
+          {friendList.map((friend) => (
+            <Friend
+              selectedFriendId={selectedFriendId}
+              id={friend.id}
+              key={friend.id}
+              setSelectedFriendId={setselectedFriendId}
+              oweBalance={friend.oweBalance}
+              img={friend.img}
+              friendName={friend.name}
+            />
+          ))}
+        </ul>
+      ) : (
+        <div style={{ width: "100%" }}>
+          <h4>No friends on your list 😭</h4>
+        </div>
+      )}
       <div className={styles.addFriendContainer}>
         {isOpen ? <NewFriendForm setFriendList={setFriendList} /> : null}
         <AddFriendButton isOpen={isOpen} setIsOpen={setIsOpen} />

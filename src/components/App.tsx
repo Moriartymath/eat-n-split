@@ -5,26 +5,7 @@ import PaymentInfo from "./PaymentInfo/PaymentInfo.tsx";
 
 function App() {
   const [selectedFriendId, setSelectedFriendId] = useState(-1);
-  const [friendList, setFriendList] = useState([
-    {
-      img: "https://i.pravatar.cc/48",
-      name: "illia Strelia",
-      id: Date.now(),
-      oweBalance: 20,
-    },
-    {
-      img: "https://i.pravatar.cc/48",
-      name: "illia Strelia1",
-      id: 1,
-      oweBalance: -50,
-    },
-    {
-      img: "https://i.pravatar.cc/48",
-      name: "illia Strelia2",
-      id: 2,
-      oweBalance: 100,
-    },
-  ]);
+  const [friendList, setFriendList] = useState([]);
 
   return (
     <div className={styles.App}>
@@ -39,6 +20,8 @@ function App() {
           friendName={
             friendList.find((friend) => friend.id === selectedFriendId).name
           }
+          friendId={selectedFriendId}
+          setFriendList={setFriendList}
         />
       ) : null}
     </div>
