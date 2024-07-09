@@ -59,7 +59,7 @@ function PaymentInfo({
         });
       }}
     >
-      <h1>SPLIT BILL WITH {friendName}</h1>
+      <h1>SPLIT BILL WITH {friendName.toUpperCase()}</h1>
       {allInputs.map((inputInfo, index) => (
         <PaymentInput
           key={index}

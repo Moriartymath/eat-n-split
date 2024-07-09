@@ -25,11 +25,16 @@ function Friend({
         </div>
         <div className={styles.text}>
           <h3>{friendName}</h3>
-          <p>
+          <p
+            style={{
+              color:
+                oweBalance === 0 ? "" : oweBalance > 0 ? "#21d007" : "#fa4c06",
+            }}
+          >
             {!oweBalance
               ? `You and ${friendName} are even`
               : oweBalance > 0
-              ? `${friendName} owes you ${oweBalance}`
+              ? `${friendName} owes you ${oweBalance}€`
               : `You owe ${friendName} ${Math.abs(oweBalance)}€`}
           </p>
         </div>

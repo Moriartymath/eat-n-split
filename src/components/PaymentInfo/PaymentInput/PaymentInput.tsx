@@ -8,6 +8,7 @@ function PaymentInput({ text, max, value, onChange }) {
         <input
           type="number"
           max={max}
+          min={0}
           value={value}
           onChange={onChange}
           className={styles.inputNumber}
