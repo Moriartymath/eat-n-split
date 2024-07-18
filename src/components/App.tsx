@@ -17,6 +17,7 @@ function App() {
       />
       {selectedFriendId !== -1 ? (
         <PaymentInfo
+          key={selectedFriendId}
           friendName={
             friendList.find((friend) => friend.id === selectedFriendId).name
           }
